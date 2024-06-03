@@ -8,20 +8,20 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  void initState() {
-    super.initState();
-    information = Information();
-  }
-    Information? information;
+  class _MyHomePageState extends State<MyHomePage> {
+    @override
+    void initState() {
+      super.initState();
+      information = Information();
+    }
+      Information? information;
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text(
           'PRactice Api',
         ),
       ),
