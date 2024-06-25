@@ -34,17 +34,57 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(snapShot.hasError.toString()),
             );
           } else if (snapShot.hasData) {
-           return  Column(
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(snapShot.data!.main),
-                Text(snapShot.data!.id.toString()),
-                Text(snapShot.data!.description)
+                Row(children: [
+                 SizedBox(
+                  width: 150,
+                  height: 100,
+                  child: Card(
+                    color: Colors.red,
+                    child: Center(
+                      child: Text(
+                        snapShot.data!.main,
+                        style: AppStyle.bodyStye,
+                      ),
+                    ),
+                  ),
+                ),
+                  SizedBox(
+                  width: 150,
+                  height: 100,
+                  child: Card(
+                    color: Colors.red,
+                    child: Center(
+                      child: Text(
+                        snapShot.data!.id.toString(),
+                        style: AppStyle.bodyStye,
+                      ),
+                    ),
+                  ),
+                ),
+
+                ],
+                ),
+                                  SizedBox(
+                  width: 150,
+                  height: 100,
+                  child: Card(
+                    color: Colors.red,
+                    child: Center(
+                      child: Text(
+                        snapShot.data!.description,
+                        style: AppStyle.bodyStye,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             );
           } else {
-             return 
-             const Center(
-              child:  CircularProgressIndicator(),
+            return const Center(
+              child: CircularProgressIndicator(),
             );
           }
         },

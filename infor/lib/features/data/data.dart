@@ -9,7 +9,7 @@ class Information {
     final response = await dio.get(
       'https://api.openweathermap.org/data/2.5/weather?q=bishkek,&appid=9ca1643f2fe63535c13cf0838c32ff8d',
     );
-    if (response.data == 200) {
+    if (response.statusCode == 200) {
       final model = Model(
         main: response.data['weather'][0]['main'],
         id: response.data['weather'][0]['id'],
